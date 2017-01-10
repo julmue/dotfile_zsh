@@ -21,6 +21,8 @@ autoload -U colors && colors
 
 # Get git prompt
 source ~/.zsh/zsh-git-prompt/zsh_git_prompt
+# get teleport
+source ~/.zsh/teleport/teleport
 
 PCOLOR1=cyan
 PCOLOR2=magenta
@@ -82,6 +84,8 @@ alias s="tracker search --limit=10000 "
 alias ghc="stack ghc"
 alias ghci="stack ghci"
 
+alias j="tp goto"
+
 # Functions
 
 ## c: shortcut for changing directories
@@ -93,3 +97,7 @@ let c() {
 	    cd "$1" && ls -l;
     fi
 }
+
+let f() {
+    nautilus . 2>> /dev/null
+    }
